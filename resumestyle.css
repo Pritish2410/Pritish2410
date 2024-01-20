@@ -199,7 +199,9 @@ section:nth-child(2n+1){
 }
 
 
-
+#PORTFOLIO{
+	background-image:linear-gradient(#ff7171, #282859);
+}
 
 #PORTFOLIO i{
     color:darkblue;
