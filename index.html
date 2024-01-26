@@ -3,6 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- this is viewport meta tag, here (width=device-width) is used to specify that while watching on different screen, the size of content shouldn't shrink,
+         but adjusted according to the screen size, it is applicable only when we are modifying page size while inspecting.
+        (initial-scale=1) refers to the zoom in factor(1=100%). It is default zoom state of browzer-->
 	<title>Pritish Sahoo</title>
 	<link rel="stylesheet" href="./resumestyle.css">
 	<script src="https://kit.fontawesome.com/8fc0e9a32c.js" crossorigin="anonymous"></script>
@@ -21,6 +24,28 @@
 			</ul>
 
 		</div>
+
+        
+        <div id="nav-container">
+            <a href="#nav-lightbox">&#9776;</a>
+
+        </div>
+        <div id="nav-lightbox" class="text-align">
+            <div id="nav-content" class="text-align">
+                <ul>
+                    <li><a href="#">X</a></li>
+                    <br>
+                    <li><a href="#ABOUT">ABOUT</a></li>
+                    <li><a href="#SKILL">SKILL</a></li>
+                    <li><a href="#EXPERIENCE">EXPERIENCE</a></li>
+                    <li><a href="#EDUCATION">EDUCATION</a></li>
+                    <li><a href="#PORTFOLIO">PORTFOLIO</a></li>
+                    <li><a href="#CONTACT">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+        
+
 		<div id="name" class="text-align"><h1>PRITISH &nbsp;KUMAR &nbsp;SAHOO</h1></div>
 		<div id="links" class="text-align">
 
@@ -90,8 +115,31 @@
 		
 		
 			
-		</section>
-		<section id="EXPERIENCE">
+		
+          <section id="EXPERIENCE">
+            
+            <h1 id="heading">
+                <span><i class="fa-solid fa-briefcase"></i></span>
+                <span>Work Experience</span>
+            </h1>
+                
+            <div id="timeline">
+                <div class="timeline-box"></div>
+                <div class="timeline-box"></div>
+                <div class="timeline-box"></div>
+                <div class="timeline-box"></div>
+                <div class="timeline-divider">
+                    <div class="timeline-traveller">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                </div>
+            </div>
+            
+            
+                    
+                
+            
+            
 			
 		</section>
 		<section id="EDUCATION">
@@ -165,7 +213,72 @@
 		</section>
 
 		<section id="CONTACT">
-			
+			<div id=heading>
+                <h1>
+                    <span><i class="fa-regular fa-address-card"></i></span>
+                    <span>Contact</span>
+                </h1>
+            </div>
+            <div id="info">
+                
+                
+            
+                <div id="form">
+
+                    <input type="text" name="Name" placeholder="Your Name" required>
+
+                    <input type="email" name="Email" placeholder="Your Email" required>
+
+					
+                    <!-- <input type="message"  name="Message" placeholder="Message" required> -->
+
+                    <textarea id="message" rows="2" cols="40" placeholder="Message"></textarea>
+                    
+                    <button type="submit" name="Send Message">SEND MESSAGE</button>
+                </div>
+                <div id="details">
+                    <div id="get-in-touch">
+                        <heading><h1>
+                            Get in Touch
+                            </h1></heading>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum.
+                        </p>
+
+                    </div>
+                <div id="address">
+                    <heading><h1>
+                        My Address
+                        </h1></heading>
+                    <div id="address-info">
+                        <div id="location">
+                            <span><i class="fa-solid fa-location-dot"></i></span>
+                            <span>Rourkela,Odisha,India</span> 
+                        </div>
+                        <div id="phone">
+                            <span><i class="fa-solid fa-mobile-screen-button"></i></span>
+                            <span>+91 9692052706</span>
+                        </div>
+                        <div id="email">
+                            <span><i class="fa-regular fa-envelope"></i></span>
+                            <span>pritishsahoo24october2003@gmail.com</span>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                    
+
+                </div>
+            </div>
+            <div id="contact-links">
+                <span><a href=""><i class="fa-brands fa-linkedin-in"></i></a></span>
+                <span><a href=""><i class="fa-brands fa-stack-overflow"></i></a></span>
+                <span><a href=""><i class="fa-brands fa-google-plus-g"></i></a></span>
+                <span><a href=""><i class="fa-brands fa-facebook-f"></i></a></span>
+                <span><a href=""><i class="fa-brands fa-quora"></i></a></span>
+                
+            </div>
 		</section>
 	</main>
 
