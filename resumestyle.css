@@ -26,12 +26,95 @@
 	
 
 }
+#nav-container{
+    display: none;
+}
+#nav-container a{
+    color:aquamarine ;
+    text-decoration:none;
+    font-size: 1.5rem;
+}
+
+#nav-lightbox {
+    position: fixed;
+    height: 0;
+    width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 2s ease-in-out;
+    z-index: 2;
+}
+
+#nav-lightbox:target {
+    height: 100%;
+    width: 100%;
+}
+
+#nav-content {
+    height: 30%;
+    width: 30%;
+    background-color: rgb(191, 201, 172);
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    opacity: 0.95;
+}
+
+#nav-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+#nav-content li {
+    padding: 15px;
+    text-align: center;
+    
+}
+#nav-content li a {
+    text-decoration: none;
+    font-size: 15px;
+    color:rgb(85, 35, 106)
+}
+
+#nav-content li a:hover{
+    border-bottom: 2px solid rgb(143, 24, 24);
+    color:darkgreen;
+}
+
+@media screen and (max-width: 600px) {
+    #nav {
+        display: none;
+    }
+
+    #nav-container {
+        padding-top: 30px;
+        padding-left:20px;
+        font-weight: bold;
+        display: block;
+    }
+
+    #nav-lightbox:target #nav-container {
+        display: block;
+    }
+}
+
+/* @media screen and (max-width: 600px) it is used to show the content when the desired requirement is acquired, here the requirement is (max-width<=600) and 
+ display type must be screen*/
+
+ /* valid media types,(all, print, speech, screen) */
+
+
+
 
 #name{
 	color: rgb(244, 255, 197);
 	
-	margin-top: 150px;
+	/* margin-top: 150px; */
+    margin-top:14%;
 	letter-spacing: 5px;
+	
+
 }
 
 #main-header #links{
@@ -66,7 +149,7 @@
     background-position: center;
     background-size: cover;
     width: 100vw;
-	height:60vh;
+	height:78vh;
     margin-left: 0;
 	background-attachment: fixed;
 	z-index: 1;
@@ -196,10 +279,75 @@ section:nth-child(2n+1){
     width:70%;
 }
 
-
-#PORTFOLIO{
-	background-image:linear-gradient(#ff7171, #282859);
+/* EXPERIENCE */
+#EXPERIENCE #heading {
+    color:darkblue;
+    font-weight:bold;
+    padding:30px;
 }
+
+#EXPERIENCE #timeline{
+    position:relative;
+    width: 75%;
+    border:2px solid black;
+
+}
+.timeline-box{
+    position:relative;
+    margin:5px;
+    width:40%;
+    left:5%;
+    min-height:150px;
+    border:2px solid black;
+}
+.timeline-box:nth-child(2n){
+    left:53%;
+}
+.timeline-box:nth-child(2n+1)::after{
+    content:'';
+    position:absolute;
+    top:35%;
+    right:-12.3%;
+    border-radius:50%;
+    width:0.5rem;
+    height:0.5rem;
+    background-color:lightgrey;
+    z-index: 1;
+
+}
+.timeline-box:nth-child(2n)::after{
+    content:'';
+    position:absolute;
+    top: 50px;
+    left:-9.7%;
+    border-radius:50%;
+    width:0.5rem;
+    height:0.5rem;
+    background-color:lightgrey;
+    z-index: 1;
+
+}
+
+
+
+.timeline-divider{
+    position:absolute;
+    height:75%;
+    width:0;
+    border:1px dashed lightblue;
+    top:10%;
+    left:50%;
+    z-index: 0;
+}
+.timeline-traveller{
+    position:sticky;
+    top:25%;
+    transform:rotate(90deg);
+    color:darkblue;
+    
+}
+
+/* PORTFOLIO */
 
 #PORTFOLIO i{
     color:darkblue;
@@ -212,7 +360,7 @@ section:nth-child(2n+1){
 #PORTFOLIO #content{
 	box-sizing: border-box;
     display:flex;
-    /* width:70%; */
+    width:70%;
     justify-content:space-around;
 	margin-bottom: 20px;
     flex-wrap:wrap;
@@ -236,17 +384,148 @@ section:nth-child(2n+1){
 	position:absolute;
 	height: 100%;
 	top: 0;
-	left:0;
 	color:transparent;
 	text-align: center;
-	/* vertical-align:middle; */
-	/* padding:10px; */
 	font-size: 30px;
 }
 .image-container:hover{
 	box-shadow: 0 0 20px blue;
 }
 .image-container:hover .details{
-	background-color: #80808078;
+	background-color: #653e3e78;
     color: white;
 }
+
+
+/* #PORTFOLIO{
+	background: linear-gradient(to top right ,#de1f1f,#00b6b6, #282859);
+	background: radial-gradient(cyan,red,blue);
+	background: linear-gradient(120deg ,#de1f1f,#00b6b6, #282859);
+}
+#SKILL{
+	background: repeating-radial-gradient(rgb(218, 162, 162),rgb(88, 88, 222) 5px);
+} */
+
+
+/* background-image:linear-gradient(#ff7171, #282859);
+	it is used to add gradient effect of colors*/
+/* background-image:linear-gradient(#ff7171, #282859 20%);
+/* background-image: linear-gradient(to top right ,#de1f1f,#00b6b6, #282859);
+(to top right) is used to set the direction of gradient  */
+/* background-image: linear-gradient(-120deg ,#de1f1f,#00b6b6, #282859); 
+(-120 deg) is used to set the direction of rotation of the gradient, it can be positive or negative*/
+
+/* background-image: radial-gradient(cyan,red,blue); is used to aply circular or radial gradient, we can apply similar gradient properties */
+
+
+/* it is used to apply the second color after 20% height of page from top,we can start a color using pixels or percentage */ 
+/* overflow-wrap:break-word; */
+/* in case of an overflow of words out of container, we can use this, this breaks the words into new line */
+
+#CONTACT{
+    background:linear-gradient(120deg,#2857a4,#403066);
+    
+}
+#CONTACT #info{
+    width:80vw;
+    display:flex;
+    justify-content:space-between;
+    
+}
+#CONTACT #heading{
+    margin:30px;
+}
+#CONTACT #heading span{
+    color:white;
+    
+}
+#CONTACT #form{
+    
+    text-align:left;
+    margin-right:40px;
+    width:50%;
+/*     border:2px solid black; */
+    display:flex;
+	align-items:center;
+    flex-direction:column;
+    margin-top:40px;
+    
+   
+    
+}
+#CONTACT #form input,textarea{
+   border:none;
+    /* outline:none; */
+    /* border:0px solid transparent; */
+    border-bottom:1px solid white;
+    background-color:inherit;
+    color:grey;
+    display:block;
+    margin-bottom:20px;
+    width:80%;
+    min-width: 80%;
+    max-width:80%;
+    padding-bottom:10px;
+	font-size: 20px;
+    
+    
+    
+}
+
+
+#CONTACT button[type="submit"]{
+    font-weight:bold;
+    color:white;
+    padding:10px;
+    background-color:inherit;
+    border-color:white;
+    margin-top:30px;
+    font-size: 15px;
+}
+#CONTACT button[type="submit"]:hover{
+	transition:all 0.5s ease-in-out;
+	background-color: darkblue;
+}
+#CONTACT #details{
+   
+    color:white;
+    width:50%;
+    
+}
+#CONTACT #details #get-in-touch heading,#address heading{
+    margin:20px;
+    
+}
+#CONTACT #details #get-in-touch p{
+    text-align:left;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+#CONTACT #details #address #address-info div{
+    margin-bottom:10px;
+}
+#CONTACT #contact-links i{
+    color:white;
+    background-color:inherit;
+    padding:20px 10px;
+}
+
+/* a:hover 
+used to change style on hover*/
+/* a:active 
+used to change style, if the content is active*/
+/* a:visited
+used to change style when the content is visited */
+/* a:link
+used to change style when the content is not visited */
+/* a:target
+used to change the style of the element,linked with (a) when visited */
+
+/* (a::after {content:}) is used to add content after content in (a)*/
+/* (a::before {content:}) is used to add content before content in (a) */
+/* here (content:) is compulsary, it can be("") or url or any text */
+
+
+/* :link,:visited,:focus,:hover,:active */
+/* ascending order of precedence */
